@@ -2,6 +2,8 @@ FROM node:16-slim
 
 WORKDIR /usr/src/app
 
+RUN npm install -g
+
 COPY . .
 
 RUN apt-get update && apt-get install -y wget
