@@ -1,10 +1,14 @@
 FROM node:16-slim
 
-WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/app
 
 RUN npm install -g
 
+WORKDIR /usr/src/app
+
 COPY . .
+
+RUN npm install
 
 RUN apt-get update && apt-get install -y wget
 
