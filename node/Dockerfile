@@ -1,10 +1,6 @@
 FROM node:16-slim
 
-RUN mkdir -p /usr/src/app
-
-RUN npm install -g
-
-WORKDIR /usr/src/app
+WORKDIR /src/app
 
 COPY . .
 
